@@ -1,0 +1,43 @@
+# Configuration for Multi-Agent Book Writer
+
+# Book settings
+book:
+  title: "The Rise of Agentic AI"
+  num_chapters: 5
+  output_format: "txt"  # txt, md, pdf
+
+# Ollama settings
+ollama:
+  api_url: "http://localhost:11434"
+  model: "mistral"  # Options: mistral, llama3, deepseek
+  stream: false
+  timeout: 300  # seconds
+
+# Agent settings
+agents:
+  planner:
+    enabled: true
+    temperature: 0.7
+  
+  researcher:
+    enabled: true
+    temperature: 0.7
+  
+  writer:
+    enabled: true
+    temperature: 0.8
+  
+  editor:
+    enabled: true
+    temperature: 0.5
+
+# Output settings
+output:
+  directory: "output"
+  filename: "draft.txt"
+  overwrite: true
+
+# Logging
+logging:
+  level: "INFO"
+  file: "logs/book_writer.log"
